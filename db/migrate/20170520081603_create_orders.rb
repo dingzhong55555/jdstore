@@ -3,11 +3,10 @@ class CreateOrders < ActiveRecord::Migration[5.0]
     create_table :orders do |t|
       t.integer :total, default: 0
       t.integer :user_id
-      t.integer :billing_name
-      t.integer :billing_address
-      t.integer :shipping_name
-      t.integer :shipping_address
-
+      t.srting :billing_name
+      t.srting :billing_address
+      t.srting :shipping_name
+      t.srting :shipping_address
       t.timestamps
     end
   end
