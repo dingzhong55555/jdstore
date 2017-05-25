@@ -33,7 +33,7 @@ class Admin::OrdersController < ApplicationController
 
   def reture
     @order = Order.find(params[:id])
-    @order.reture_goodcas !
+    @order.reture_good!
     redirect_to :back
   end
 
