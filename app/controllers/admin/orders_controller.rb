@@ -33,7 +33,7 @@ class Admin::OrdersController < ApplicationController
 
   def reture
     @order = Order.find(params[:id])
-    @order.reture_good!
+    @order.reture_goodcas !
     redirect_to :back
   end
 
@@ -41,7 +41,7 @@ class Admin::OrdersController < ApplicationController
 
   def admin_required
     if !current_user.admin?
-      redirect_to "/", alert: "You are not admin"
+      redirect_to "/", alert: "You are not admin!"
     end
   end
 
