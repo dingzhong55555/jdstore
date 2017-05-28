@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
+
   def create
     @order = Order.new(order_params)
     @order.user = current_user
@@ -13,7 +15,7 @@ class OrdersController < ApplicationController
       product_list.product_price = cart_item.product.price
       product_list.quantity = cart_item.quantity
       product_list.save
-    end
+    end      
       current_cart.clean!
       OrderMailer.notify_order_placed(@order).deliver!
       redirect_to order_path(@order.token)
