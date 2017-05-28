@@ -33,9 +33,9 @@ class Admin::OrdersController < ApplicationController
     redirect_to :back
   end
 
-  def reture
+  def return
     @order = Order.find(params[:id])
-    @order.reture_good!
+    @order.return_good!
     redirect_to :back
   end
 
