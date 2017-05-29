@@ -1,14 +1,21 @@
-<div class="row">  
+
+<div class="top_img">
+  大图+标题介绍
+</div>
+
+<div class="row">
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
-      <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+      <div class="panel panel-default products">
+        <%= link_to product_path(product) do %>
+          <% if product.image.present? %>
+            <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+          <% end %>
         <% end %>
-      <% end %>
-      <%= product.title %> ￥ <%= product.price %>
+        <%= product.title %> ￥ <%= product.price %>
+      </div>
     </div>
   <% end %>
 </div>
