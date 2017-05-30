@@ -1,6 +1,55 @@
 <!-- ↓↓↓ 大图滚动banner 代码块 ↓↓↓ -->
-<div class="panel panel-default" id="carousel">
-  大图滚动，参考极简生活的代码
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://www.dior.com/couture/var/dior/storage/images/cover/defile-croisiere-2018/11817892-60-chi-HK/defile-croisiere-2018_width_1400.jpg"
+      alt="..." class="carousel_img">
+      <div class="carousel-caption">
+        <h2 class="text-center">贵 族 气 质</h2>
+        <p class="text-center">古 典 度 假 风 的 荣 耀 回 归</p>
+        <%= link_to("Shop Now", products_path, class: "btn btn-default") %>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://www.dior.com/couture/var/dior/storage/images/cover/defile-croisiere-2018/11817892-60-chi-HK/defile-croisiere-2018_width_1400.jpg"
+      alt="..." class="carousel_img">
+      <div class="carousel-caption">
+        <h2 class="text-center">贵 族 气 质</h2>
+        <p class="text-center">古 典 度 假 风 的 荣 耀 回 归</p>
+        <%= link_to("Shop Now", products_path, class: "btn btn-default") %>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://www.dior.com/couture/var/dior/storage/images/cover/defile-croisiere-2018/11817892-60-chi-HK/defile-croisiere-2018_width_1400.jpg"
+      alt="..." class="carousel_img">
+      <div class="carousel-caption">
+        <h2 class="text-center">贵 族 气 质</h2>
+        <p class="text-center">古 典 度 假 风 的 荣 耀 回 归</p>
+        <%= link_to("Shop Now", products_path, class: "btn btn-default") %>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 <!-- ↑↑↑ 大图滚动banner 代码块 ↑↑↑ -->
 
@@ -8,23 +57,31 @@
 <div class="row">
 
   <div class="col-md-4">
-    <div class="panel panel-default" id="discount">
-      Discount
+    <div class="discount text-center">
+      <h2>The Black White Shirt<br>
+       REMASTERED & REIMAGINED</h2>
     </div>
   </div>
 
-  <div class="col-md-8">
+  <div class="col-md-8 ad">
       <div class="row">
           <div class="col-md-12">
-            <div class="panel panel-default" id="cloths">gift</div>
+            <div class="panel panel-default" id="first_img">
+              <h2>The Black White Shirt<br>
+               REMASTERED & REIMAGINED</h2>
+            </div>
           </div>
 
           <div class="col-md-6">
-            <div class="panel panel-default" id="cloths">women</div>
+            <div class="panel panel-default" id="second_img">
+              women
+            </div>
           </div>
 
           <div class="col-md-6">
-            <div class="panel panel-default" id="cloths">men</div>
+            <div class="panel panel-default" id="third_img">
+              men
+            </div>
           </div>
       </div>
   </div>
@@ -34,45 +91,35 @@
 <hr>
 
 <!-- ↓↓↓ 精选产品  代码块 ↓↓↓ -->
-<h2 class="text-center">Featured Products</h2>
-
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="products">
-      Product
+<h2 class="text-center">Collections</h2>
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-xs-6 col-md-3">
+      <div class="products">
+        <%= link_to product_path(product) do %>
+          <% if product.image.present? %>
+            <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+          <% end %>
+        <% end %>
+        <span class="title">
+          <%= product.title %>
+        </span>
+        <br>
+        <span class="price">
+          ￥<%= product.price %>
+        </span>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="products">
-      Product
-    </div>
-  </div>
-</div>
-
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="products">
-      Product
-    </div>
-  </div>
-</div>
-
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="products">
-      Product
-    </div>
-  </div>
+  <% end %>
 </div>
 <!-- ↑↑↑ 精选产品  代码块 ↑↑↑ -->
 
 <!-- ↓↓↓ 季度新品  代码块 ↓↓↓ -->
 <div class="row">
   <div class="col-md-12">
-    <div class="panel panel-default" id="season">
+    <div class="season">
       Season
     </div>
   </div>

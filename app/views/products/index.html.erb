@@ -1,15 +1,16 @@
 
 <!-- ↓↓↓ 大图广告 代码块 ↓↓↓ -->
 <div class="top_img">
-  大图+标题介绍
+  <span>The Black White Shirt<br>
+   REMASTERED & REIMAGINED</span>
 </div>
 <!-- ↑↑↑ 大图广告 代码块 ↑↑↑ -->
-
+<hr>
 <!-- ↓↓↓ 产品索引 代码块 ↓↓↓ -->
 <div class="row">
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
-      <div class="panel panel-default products">
+      <div class="products">
         <%= link_to product_path(product) do %>
           <% if product.image.present? %>
             <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -17,7 +18,13 @@
             <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
           <% end %>
         <% end %>
-        <%= product.title %> ￥ <%= product.price %>
+        <span class="title">
+          <%= product.title %>
+        </span>
+        <br>
+        <span class="price">
+          ￥<%= product.price %>
+        </span>
       </div>
     </div>
   <% end %>

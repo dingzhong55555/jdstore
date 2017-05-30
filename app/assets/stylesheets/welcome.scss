@@ -1,19 +1,51 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#carousel {
-    background-color: #E0E0E0;
-    height: 700px;
+
+#carousel-example-generic {
+  margin: 0 -30px 15px -30px;
 }
 
-#discount {
-    background-color: #E0E0E0;
-    height: 420px;
+.discount {
+    background-image: url('https://s-media-cache-ak0.pinimg.com/564x/f8/91/8a/f8918ae33c94bb2cd016b1ee6bfd5aa3.jpg');
+    height: 415px;
+    margin-top: -20px;
+    margin-right: -7.5px;
 }
 
-#cloths {
-    background-color: #E0E0E0;
+#first_img {
+    background-image: url('http://ell.h-cdn.co/assets/17/21/980x490/landscape-1495825358-staud-nap-10.jpg');
     height: 200px;
+    border-radius: 0;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#second_img {
+    background-image: url('https://s-media-cache-ak0.pinimg.com/564x/fa/66/94/fa66949d484f2f286024884645dd3007.jpg');
+    height: 200px;
+    border-radius: 0;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    margin-right: -7.5px;
+}
+
+#third_img {
+    background-image: url('http://www.fashiongonerogue.com/wp-content/uploads/2016/12/Hailey-Baldwin-Harpers-Bazaar-Spain-2017-Photoshoot10.jpg');
+    height: 200px;
+    border-radius: 0;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    margin-left: -7.5px;
+}
+
+.ad {
+  margin-left: -7.5px;
+
 }
 
 #products {
@@ -21,9 +53,9 @@
     height: 350px;
 }
 
-#season {
-    background-color: #E0E0E0;
-    height: 200px;
+.season {
+    background-image: url('http://www.dior.com/couture/var/dior/storage/images/la-maison-dior/cover-lmd/70-ans/10682906-18-chi-TW/70%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5_width_1400.jpg');
+    height: 225px;
 }
 
 #blogs {
