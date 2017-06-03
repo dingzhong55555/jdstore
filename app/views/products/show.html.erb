@@ -1,20 +1,18 @@
+<hr>
 <div class="row">
   <!-- ↓↓↓ 产品图片 代码块 ↓↓↓ -->
   <div class="col-md-7">
-
-      <div class="panel panel-default product_item">
-        <% if @product.image.present? %>
-          <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-        <% end %>
-      </div>
-
-      <div class="panel panel-default" style="height:130px;">
-        more img
-      </div>
-
-  </div>
+    <!-- 显示第一张商品图片 - 使用 media 尺寸大圖 -->
+    <div class="col-md-12">
+      <%= image_tag(@photos.first.avatar.medium.url, class: 'medium-image thumbnail') %>
+    </div>
+    <!-- 其余图片 - 使用 small 尺寸小圖 -->
+     <% @photos.each_with_index do |p| %>
+        <div class="col-md-3 image-box">
+            <%= image_tag(p.avatar.small.url, class: 'list-image thumbnail') %>
+        </div>
+     <% end %>
+    </div>
   <!-- ↑↑↑ 产品图片 代码块 ↑↑↑ -->
 
  <!-- ↓↓↓ 产品选购 代码块 ↓↓↓ -->
@@ -49,19 +47,3 @@
   </div>
   <!-- ↓↓↓ 产品选购 代码块 ↓↓↓ -->
 </div>
-
- <hr>
- <!-- ↓↓↓ 产品评价 代码块 ↓↓↓ -->
- <div class="row">
-   <div class="col-md-3">
-     <div class="panel panel-default" style="height:600px;">
-       购买须知
-     </div>
-   </div>
-   <div class="col-md-9">
-     <div class="panel panel-default" style="height:600px;">
-       用户评价
-     </div>
-   </div>
- </div>
- <!-- ↓↓↓ 产品评价 代码块 ↓↓↓ -->

@@ -15,3 +15,28 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+$(document).on('mouseover', '.list-image', function () {
+  var src_small = $(this).attr('src') //抓取小图图片路径
+  var src_medium = src_small.toString().replace("small", "medium") //更改小图图片路径
+
+  $('.medium-image').attr('src', src_medium) //变更大图图片路径
+
+  $('.list-image').removeClass('list-image-active') //其他小图移除图片阴影
+  $(this).addClass('list-image-active') //当前小图新增图片阴影
+})
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 1000) {
+    $(".goTop").fadeIn(100);
+  } else {
+    $(".goTop").fadeOut(200);
+  }
+
+  $(".goTop").click(
+    function() {
+      $('html,body').animate({
+          scrollTop: 0
+      }, 700);
+    });
+})

@@ -14,18 +14,33 @@
   letter-spacing:3px
 }
 
-.products {
-  height: 450px;
-}
 
 .price {
   color: #953532;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .title {
   color: #9E9E9E;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 500px;
+}
+
+.medium-image {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.list-image {
+    width: 100%;
+    height: 100%;
+}
+
+.list-image-active {
+    box-shadow: 1.5px 1.5px 1.5px #666;
+}
+
+.product_box {
+  height: 300px;
 }
