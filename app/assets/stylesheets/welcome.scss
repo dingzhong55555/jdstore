@@ -4,6 +4,7 @@
 
 #carousel-example-generic {
   margin: 0 -30px 15px -30px;
+  height:100%;
 }
 
 .discount {
@@ -58,11 +59,24 @@
     height: 225px;
 }
 
-#blogs {
-    background-color: #E0E0E0;
-    height: 200px;
-}
-
 .td {
   height: 80px;
+}
+
+.blogs {
+  height: 250px;
+  background-image: url('http://www.dior.com/couture/var/dior/storage/images/la-maison-dior/cover-lmd/70-ans/10682906-18-chi-TW/70%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5_width_1400.jpg');
+
+}
+
+
+.blog_text {
+  background-color: #EEEEEE;
+  height: 250px;
+}
+
+.bottom_img {
+    background-image: url('http://www.dior.com/couture/var/dior/storage/images/la-maison-dior/cover-lmd/70-ans/10682906-18-chi-TW/70%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5_width_1400.jpg');
+    height: 225px;
+    margin: 0 -30px;
 }

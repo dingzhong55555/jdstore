@@ -74,13 +74,13 @@
 
           <div class="col-md-6">
             <div class="panel panel-default" id="second_img">
-              women
+              <h1>Women</h1>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="panel panel-default" id="third_img">
-              men
+              <h1>Men</h1>
             </div>
           </div>
       </div>
@@ -94,7 +94,7 @@
 <h2 class="text-center">Collections</h2>
 <div class="row">
   <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
+    <div class="col-md-3">
       <div class="products">
         <%= link_to product_path(product) do %>
           <% if product.image.present? %>
@@ -120,7 +120,7 @@
 <div class="row">
   <div class="col-md-12">
     <div class="season">
-      Season
+      <h3>Season</h3>
     </div>
   </div>
 </div>
@@ -131,87 +131,73 @@
 <!-- ↓↓↓ 博客  代码块 ↓↓↓ -->
 <h2 class="text-center">Blogs</h2>
 
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="blogs">
-      Blog
-    </div>
-  </div>
-</div>
+<div class-"row blog_box">
 
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="blogs">
-      Blog Pic
-    </div>
+  <div class="col-md-3 blogs">
   </div>
-</div>
+  <div class="col-md-3 blog_text">
+    <h3>Blogging About FASHION</h3>
+    2017-06-03<br>
+    learn how to cloth yourself,you can do youself,learn how to cloth yourself.
+    learn how to cloth yourself,you can do youself,learn how to cloth yourself.
+    <br>
+    <br>
+    <%= link_to("READ MORE",products_path, class: "btn btn-default") %>
+  </div>
+  <div class="col-md-3 blogs">
+  </div>
+  <div class="col-md-3 blog_text">
+    <h3>Blogging About FASHION</h3>
+    2017-06-03<br>
+    learn how to cloth yourself,you can do youself,learn how to cloth yourself.
+    learn how to cloth yourself,you can do youself,learn how to cloth yourself.
+    <br>
+    <br>
+    <%= link_to("READ MORE",products_path, class: "btn btn-default") %>
+  </div>
 
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="blogs">
-      Blog
-    </div>
-  </div>
-</div>
 
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="blogs">
-      Blog Pic
-    </div>
+  <div class="col-md-3 blog_text">
+    <h3>Blogging About FASHION</h3>
+    2017-06-03<br>
+    learn how to cloth yourself,you can do youself,learn how to cloth yourself.
+    learn how to cloth yourself,you can do youself,learn how to cloth yourself.
+    <br>
+    <br>
+    <%= link_to("READ MORE",products_path, class: "btn btn-default") %>
   </div>
-</div>
+  <div class="col-md-3 blogs">
+  </div>
+  <div class="col-md-3 blog_text">
+    <h3>Blogging About FASHION</h3>
+    2017-06-03<br>
+    learn how to cloth yourself,you can do youself,learn how to cloth yourself.
+    learn how to cloth yourself,you can do youself,learn how to cloth yourself.
+    <br>
+    <br>
+    <%= link_to("READ MORE",products_path, class: "btn btn-default") %>
+  </div>
+  <div class="col-md-3 blogs">
+  </div>
 
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="blogs">
-      Blog
-    </div>
-  </div>
-</div>
-
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="blogs">
-      Blog Pic
-    </div>
-  </div>
-</div>
-
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="blogs">
-      Blog
-    </div>
-  </div>
-</div>
-
-<div class-"row">
-  <div class="col-md-3">
-    <div class="panel panel-default" id="blogs">
-      Blog Pic
-    </div>
-  </div>
 </div>
 <!-- ↑↑↑ 博客  代码块 ↑↑↑ -->
-
 <!-- ↓↓↓ 合作方 代码块 ↓↓↓ -->
-<table class="table table-bordered">
+<!-- <table class="table table-bordered">
   <tr>
     <td class="td">brand pic</td>
     <td class="td">brand pic</td>
     <td class="td">brand pic</td>
     <td class="td">brand pic</td>
   </tr>
-</table>
+</table> -->
 <!-- ↑↑↑ 合作方 代码块 ↑↑↑ -->
 
 <!-- ↓↓↓ 底图  代码块 ↓↓↓ -->
 <div class="row">
   <div class="col-md-12">
-    <div class="panel panel-default" id="season">
-      Bottom img
+    <div class="bottom_img">
+      <h3>Season</h3>
     </div>
   </div>
 </div>
