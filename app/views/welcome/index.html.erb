@@ -59,7 +59,7 @@
   <div class="col-md-4">
     <div class="discount text-center">
       <h2>The Black White Shirt<br>
-       REMASTERED & REIMAGINED</h2>
+       REMASTERED</h2>
     </div>
   </div>
 
@@ -91,10 +91,10 @@
 <hr>
 
 <!-- ↓↓↓ 精选产品  代码块 ↓↓↓ -->
-<h2 class="text-center">Collections</h2>
+<h2 class="text-center">COLLECTIONS</h2>
 <div class="row">
   <% @products.each do |product| %>
-    <div class="col-md-3 product_box">
+    <div class="col-md-3">
         <%= link_to product_path(product) do %>
           <% if product.photos.present? %>
             <%= image_tag(product.photos[0].avatar.thumb.url, class: "list-image thumbnail") %>
@@ -128,7 +128,7 @@
 <hr>
 
 <!-- ↓↓↓ 博客  代码块 ↓↓↓ -->
-<h2 class="text-center">Blogs</h2>
+<h2 class="text-center">BLOGS</h2>
 
 <div class-"row blog_box">
 

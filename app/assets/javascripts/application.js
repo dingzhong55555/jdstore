@@ -27,7 +27,7 @@ $(document).on('mouseover', '.list-image', function () {
 })
 
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 1000) {
+  if ($(this).scrollTop() > 1500) {
     $(".goTop").fadeIn(100);
   } else {
     $(".goTop").fadeOut(200);

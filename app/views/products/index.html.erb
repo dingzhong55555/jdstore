@@ -5,11 +5,10 @@
    REMASTERED & REIMAGINED</span>
 </div>
 <!-- ↑↑↑ 大图广告 代码块 ↑↑↑ -->
-<hr>
 <!-- ↓↓↓ 产品索引 代码块 ↓↓↓ -->
 <div class="row">
   <% @products.each do |product| %>
-    <div class="col-md-3 product_box">
+    <div class="col-md-3">
         <%= link_to product_path(product) do %>
           <% if product.photos.present? %>
             <%= image_tag(product.photos[0].avatar.thumb.url, class: "list-image thumbnail") %>
@@ -25,6 +24,7 @@
         <span class="price">
           ￥<%= product.price %>
         </span>
+
     </div>
   <% end %>
 </div>

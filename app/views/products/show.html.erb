@@ -1,7 +1,7 @@
 <hr>
-<div class="row">
+<div class="row ">
   <!-- ↓↓↓ 产品图片 代码块 ↓↓↓ -->
-  <div class="col-md-7">
+  <div class="col-md-8 ">
     <!-- 显示第一张商品图片 - 使用 media 尺寸大圖 -->
     <div class="col-md-12">
       <%= image_tag(@photos.first.avatar.medium.url, class: 'medium-image thumbnail') %>
@@ -15,33 +15,26 @@
     </div>
   <!-- ↑↑↑ 产品图片 代码块 ↑↑↑ -->
 
- <!-- ↓↓↓ 产品选购 代码块 ↓↓↓ -->
-  <div class="col-md-5">
-    <div class="panel panel-default" style="height:700px;">
+  <!-- ↓↓↓ 产品选购 代码块 ↓↓↓ -->
+  <div class="col-md-4">
 
-      <div class="panel panel-default">
-        <h2><%= @product.title %></h2>
-      </div>
+    <div class="dash">
+      <h2><%= @product.title %></h2>
+      <h3>￥ <%= @product.price %></h3>
+    </div>
 
-      <div class="panel panel-default" style="height:200px;">
-        <p>
-          <%= @product.description %>
-        </p>
-      </div>
+    <div class="dash">
+      <%= simple_format(@product.description) %>
+      库存：<%= @product.quantity %>
+    </div>
 
-      <div class="panel panel-default" style="height:100px;">数量：<%= @product.quantity %></div>
-
-      <div class="project-price panel panel-default" style="height:100px;">
-         <h2>￥ <%= @product.price %></h2>
-       </div>
-
-      <div class="pull-right">
-        <% if @product.quantity.present? && @product.quantity > 0%>
-        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
-        <% else %>
-         已销售以空，无法购买
-        <% end%>
-      </div>
+    <div class="pull-right">
+      <% if @product.quantity.present? && @product.quantity > 0%>
+      <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+      <% else %>
+       已销售以空，无法购买
+      <% end%>
+    </div>
 
     </div>
   </div>
