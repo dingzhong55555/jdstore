@@ -19,6 +19,26 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
 
+.sign_up_back {
+  background-image: url('http://www.51pptmoban.com/d/file/2014/05/11/787d3e498da7b69e0a92bc465dff6d40.jpg');
+  height:600px;
+  margin: 0 -30px -100px -30px;
+}
+
+.sign_up_box {
+  height: 380px;
+  border-style: solid;
+  margin-top: 100px;
+  border-radius: 15px;
+}
+
+
+.footer {
+  height: 200px;
+  margin-top: 100px;
+
+}
+
 .navbar-default {
   background-color: black;
   margin-bottom: 0;

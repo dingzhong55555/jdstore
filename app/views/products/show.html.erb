@@ -25,7 +25,12 @@
 
     <div class="dash">
       <%= simple_format(@product.description) %>
-      库存：<%= @product.quantity %>
+      <!-- ↓↓↓ 数量加减 代码块 ↓↓↓ -->
+      <%= link_to("-", "", id: "quantity-minus", class: "quantity-minus btn btn-default disabled") %>
+      <input type="text" name="quantity" value="1" id="quantity-input" class="quantity-input">
+      <%= link_to("+", "", id: "quantity-plus", class: "quantity-plus btn btn-default #{@product.quantity <= 1 ? 'disabled' : ''}") %>
+      （库存：<%= @product.quantity %>）
+      <!-- ↑↑↑ 数量加减 代码块 ↑↑↑ -->
     </div>
 
     <div class="pull-right">
