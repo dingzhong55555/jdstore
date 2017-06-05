@@ -7,7 +7,7 @@
 <!-- ↑↑↑ 大图广告 代码块 ↑↑↑ -->
 <!-- ↓↓↓ 搜索无结果 代码块 ↓↓↓ -->
 <% if @products.blank? %>
-  <h2 class="text-center">There are no products containing the term <%= params[:search] %>.</h2>
+  <h2 class="text-center">没有找到关于<%= params[:search] %>的商品！</h3>
 <% end %>
 <!-- ↑↑↑ 搜索无结果 代码块 ↑↑↑ -->
 <!-- ↓↓↓ 产品索引 代码块 ↓↓↓ -->
