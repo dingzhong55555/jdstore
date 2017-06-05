@@ -1,8 +1,4 @@
 class ProductsController < ApplicationController
-  def index
-    @q = Product.ransack(params[:q])
-    @products = @q.result(distinct: true)
-  end
 
   def show
     @product = Product.find(params[:id])
@@ -18,6 +14,15 @@ class ProductsController < ApplicationController
       flash[:warning] = "#{@product.title}已存在购物车中"
     end
       redirect_to :back
+  end
+
+  def index
+    @products = Product.all
+    if params[:search]
+      @products = Product.search(params[:search]).order("created_at DESC")
+    else
+      @products = Product.all.order("created_at DESC")
+    end
   end
 
 end

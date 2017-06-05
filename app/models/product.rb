@@ -3,4 +3,9 @@ class Product < ApplicationRecord
 
   has_many :photos  #一个产品可以有多个图片
   accepts_nested_attributes_for :photos   #把photos作为Product的巣状属性
+
+  def self.search(search)
+    where("title LIKE ? OR price LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
+  end
+
 end

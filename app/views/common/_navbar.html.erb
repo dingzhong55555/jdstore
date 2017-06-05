@@ -13,7 +13,14 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                
+                <li>
+                  <div class="search_box">
+                    <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+                      <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+                      <%= submit_tag("Search", :name => nil)%>
+                    <% end %>
+                  </div>
+                </li>
                 <li>
                   <%= link_to carts_path do  %>
                   购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
